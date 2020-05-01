@@ -1,0 +1,88 @@
+{
+    "users": {
+		"bruna_maba": {
+            "username": "isabela_costa",
+            "email": "bruna_maba@gmail.com",
+            "password": "senha",
+            "hasAccessedBefore": true,
+
+            "showCategories": ["movies_romance", "reality_shows"],
+            "sportCategories": ["soccer", "volei"],
+            "news": ["cars", "fashion"],
+
+            "likedShows": ["100000", "100002", "100005", "100007"],
+            "likedSports": ["200003", "200007", "200008", "200009"],
+            "likedNews": ["300008", "300010", "300011", "300014"],
+
+            "friends": ["isabela_costa", "leo_dutra", "nanda_rodrigues", "ros_padilha"]
+        },
+
+        "isabela_costa": {
+            "username": "isabela_costa",
+            "email": "isabela_costa@gmail.com",
+            "password": "senha",
+            "hasAccessedBefore": true,
+
+            "showCategories": ["movies_romance", "series_comedy"],
+            "sportCategories": ["olympics", "basketball"],
+            "news": ["politics", "economy"],
+
+            "likedShows": ["100001", "100003", "100005", "300008", "300011", "300014"],
+            "likedSports": [],
+            "likedNews": ["300001", "300002", "300003", "300007"],
+
+            "friends": ["bruna_maba", "leo_dutra", "nanda_rodrigues", "ros_padilha"]
+        },
+
+        "leo_dutra": {
+            "username": "isabela_costa",
+            "email": "leo_dutra@gmail.com",
+            "password": "senha",
+            "hasAccessedBefore": true,
+
+            "showCategories": ["movies_action", "series_fiction"],
+            "sportCategories": ["soccer", "cartola"],
+            "news": [],
+
+            "likedShows": ["100001", "100003", "100005", "1000012", "100013", "100014"],
+            "likedSports": ["200000", "200001", "200003", "200004", "200005", "200008", "200011"],
+            "likedNews": ["300004", "30009"],
+
+            "friends": ["bruna_maba", "isabela_costa", "nanda_rodrigues", "ros_padilha"]
+        },
+
+        "nanda_rodrigues": {
+            "username": "isabela_costa",
+            "email": "nanda_rodrigues@gmail.com",
+            "password": "senha",
+            "hasAccessedBefore": true,
+
+            "showCategories": ["series_comedy", "series_romance"],
+            "sportCategories": ["volei"],
+            "news": ["tv", "economy"],
+
+            "likedShows": ["100001", "100002", "100005", "100011"],
+            "likedSports": ["200006", "200016", "200018"],
+            "likedNews": ["300000", "300002", "300005", "300007", "300008", "300009", "300012", "300015"],
+
+            "friends": ["bruna_maba", "isabela_costa", "leo_dutra", "ros_padilha"]
+        },
+
+        "ros_padilha": {
+            "username": "isabela_costa",
+            "email": "ros_padilha@gmail.com",
+            "password": "senha",
+            "hasAccessedBefore": true,
+
+            "showCategories": ["novels"],
+            "sportCategories": ["soccer", "basketball"],
+            "news": ["cars", "politics"],
+
+            "likedShows": ["100000", "100003", "100004"],
+            "likedSports": ["200005", "200008", "200009", "200011"],
+            "likedNews": ["300001", "300002"],
+
+            "friends": ["bruna_maba", "isabela_costa", "leo_dutra", "nanda_rodrigues"]
+        }
+    }
+}
