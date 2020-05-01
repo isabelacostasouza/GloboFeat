@@ -83,6 +83,91 @@
             "likedNews": ["300001", "300002"],
 
             "friends": ["bruna_maba", "isabela_costa", "leo_dutra", "nanda_rodrigues"]
+        },
+
+        "joao_santos": {
+            "username": "joao_santos",
+            "email": "joao_santos@gmail.com",
+            "password": "globo123",
+            "hasAccessedBefore": false,
+
+            "showCategories": [],
+            "sportCategories": [],
+            "news": [],
+
+            "likedShows": [],
+            "likedSports": [],
+            "likedNews": [],
+
+            "friends": []
+        },
+
+        "maria_silva": {
+            "username": "maria_silva",
+            "email": "maria_silva@gmail.com",
+            "password": "minhaGlobo7",
+            "hasAccessedBefore": false,
+
+            "showCategories": [],
+            "sportCategories": [],
+            "news": [],
+
+            "likedShows": [],
+            "likedSports": [],
+            "likedNews": [],
+
+            "friends": []
+        },
+
+        "antonio_neto": {
+            "username": "antonio_neto",
+            "email": "antonio_neto@gmail.com",
+            "password": "dev4life",
+            "hasAccessedBefore": false,
+
+            "showCategories": [],
+            "sportCategories": [],
+            "news": [],
+
+            "likedShows": [],
+            "likedSports": [],
+            "likedNews": [],
+
+            "friends": []
+        },
+
+        "tereza_cristina": {
+            "username": "tereza_cristina",
+            "email": "tereza_cristina@gmail.com",
+            "password": "s3nh@",
+            "hasAccessedBefore": false,
+
+            "showCategories": [],
+            "sportCategories": [],
+            "news": [],
+
+            "likedShows": [],
+            "likedSports": [],
+            "likedNews": [],
+
+            "friends": []
+        },
+
+        "ana_almeida": {
+            "username": "ana_almeida",
+            "email": "ana_almeida@gmail.com",
+            "password": "hacka45",
+            "hasAccessedBefore": false,
+
+            "showCategories": [],
+            "sportCategories": [],
+            "news": [],
+
+            "likedShows": [],
+            "likedSports": [],
+            "likedNews": [],
+
+            "friends": []
         }
     }
 }

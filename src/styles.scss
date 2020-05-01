@@ -35,6 +35,7 @@ body {
 
     #navbar {
         display: none;
+        padding-right: 13%;
     }
     
     .link-active {
@@ -77,6 +78,14 @@ body {
         }
     }
 
+    #navbar-without-login {
+        padding-right: 5%;
+
+        #profile-picture {
+            margin-right: -5%;
+        }
+    }
+
     #navbar, #navbar-without-login {
         background-color: $background-color-dark;
         position: fixed;
@@ -94,19 +103,13 @@ body {
 
         text-align: right;
         vertical-align: middle;
-
-        padding-right: 5%;
         z-index: 2;
 
         p {
             position:absolute;
-            top:25%;
+            top:27%;
             left: 25%;
-            right: 21%;
-        }
-
-        #profile-picture {
-            margin-right: -5%;
+            right: 20%;
         }
 
         img {
@@ -133,7 +136,7 @@ body {
 
         text-align: right;
 
-        margin-top: 21%;
+        margin-top: 22%;
         padding-right: 1%;
 
         p {
@@ -574,21 +577,21 @@ body {
 
             background-image: linear-gradient(
                 to right, 
-                $blue-dark-shade,
-                $blue-dark-shade 5.5%,
-                $blue-light-shade 5.5%,
-                $blue-light-shade 85%,
+                $yellow-dark-shade,
+                $yellow-dark-shade 5.5%,
+                $yellow-light-shade 5.5%,
+                $yellow-light-shade 85%,
             );
 
             text-align: left;
             font-style: normal;
-            font-weight: 500;
-            font-size: 110%;
+            font-weight: 600;
+            font-size: 100%;
             line-height: 19px;
             letter-spacing: 0.05em;
             font-family: 'Barlow';
 
-            color: $white;
+            color: #000000;
 
             margin: 0;
             width: 90%;
@@ -598,8 +601,8 @@ body {
 
             p {
                 margin-left: 12%;
-                padding-top: 3.5%;
-                padding-bottom: 4.5%;
+                padding-top: 2.5%;
+                padding-bottom: 3.5%;
             }
         }
 
@@ -617,13 +620,13 @@ body {
 
             text-align: left;
             font-style: normal;
-            font-weight: 500;
-            font-size: 110%;
+            font-weight: 600;
+            font-size: 100%;
             line-height: 19px;
             letter-spacing: 0.05em;
             font-family: 'Barlow';
 
-            color: $white;
+            color: #000000;
 
             width: 90%;
             margin-left: auto;
@@ -632,15 +635,15 @@ body {
 
             p {
                 margin-left: 12%;
-                padding-top: 3.5%;
-                padding-bottom: 4.5%;
+                padding-top: 2.5%;
+                padding-bottom: 3.5%;
             }
         }
 
         #warning {
             text-align: center;
             font-size: 90%;
-            margin-top: -2%;
+            margin-top: -1%;
         }
 
         #step {
@@ -675,8 +678,8 @@ body {
 
             .check {
                 position: absolute;
-                top:47%;
-                left:47%;
+                top:50%;
+                left:49%;
                 transform:translate(-45%, -45%);
 
                 img {
