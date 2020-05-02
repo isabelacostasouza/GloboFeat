@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: 'step-01', component: ChooseFavoriteShowsComponent },
   { path: 'step-02', component: ChooseFavoriteSportShowsComponent },
   { path: 'step-03', component: ChooseFavoriteNewsComponent },
-  { path: 'initial-find-friends', component: FindFriendsComponent },
+  { path: 'find-friends', component: FindFriendsComponent },
 
   //account
   { path: 'login', component: LoginComponent },

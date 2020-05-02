@@ -7,10 +7,12 @@
 </div>
 
 <div id="shows-home">
-    <div id="navbar">
-        <p>@wonder_woman</p>
+    <div id="navbar" style="display: none;">
+        <p id="username"></p>
         <div id="profile-picture">
-            <img src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+            <a href="/authentication">
+                <img id='user_picture'>
+            </a>
         </div>
     </div>
 
@@ -109,10 +111,514 @@
     <input type="text" placeholder="Pesquisar conteúdo">
 
     <div id="series-movies">
-        <p>FILMES E SÉRIES</p>
+        <p>REALITY SHOWS</p>
 
         <div class="container">
-            <div id='carouselContainer' class="carousel slide" data-ride="carousel">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100000']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100001']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100002']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>ROMANCE</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100003']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100004']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100005']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>AÇÃO</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100006']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100007']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100008']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>NOVELAS</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100009']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100010']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100011']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>DRAMA</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100012']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100013']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100014']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>COMÉDIA</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100015']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100016']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100017']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>GUERRA</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100018']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100019']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100020']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>TERROR</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100021']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100022']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100023']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>SCI-FI</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100024']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100025']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100026']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>MUSICAL</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100027']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100028']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100029']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>HISTÓRICOS</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100030']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100031']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100032']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>CRIANÇAS</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="">
+                            <a [routerLink]="['/content-info', '100033']">
+                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100034']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+
+                            <a [routerLink]="['/content-info', '100035']">
+                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                            </a>
+                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+                            
+                            <div id="titles">
+                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
+                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
+                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 97%;
+                height: 3px;
+                margin-bottom: 6%;
+                margin-top: 1%;
+                background: #2e2e2e;">
+            </div>
+        </div>
+    </div>
+
+    <div id="series-movies">
+        <p>OUTROS</p>
+
+        <div class="container">
+            <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="">
@@ -138,95 +644,12 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="">
-                            <a [routerLink]="['/content-info', '12345']">
-                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
-                            </a>    
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-
-                            <a [routerLink]="['/content-info', '12346']">
-                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
-                            </a>
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-
-                            <a [routerLink]="['/content-info', '24346']">
-                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
-                            </a>    
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-                            
-                            <div id="titles">
-                                <p style="width: 28%; margin-left: 0.75%;">Titulo 4</p>
-                                <p style="width: 28%; margin-left: 5.5%;">Titulo muito longo</p>
-                                <p style="width: 28%; margin-left: 6.5%;">Titulo 6</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="more">
-        <p>MAIS EM ENTRETENIMENTO</p>
-
-        <div class="container">
-            <div id='carouselContainer' class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="">
-                            <a [routerLink]="['/content-info', '32345']">
-                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
-                            </a>    
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-
-                            <a [routerLink]="['/content-info', '32346']">
-                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
-                            </a>
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-
-                            <a [routerLink]="['/content-info', '32346']">
-                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
-                            </a>    
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-                            
-                            <div id="titles">
-                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
-                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
-                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="">
-                            <a [routerLink]="['/content-info', '42345']">
-                                <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
-                            </a>    
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-
-                            <a [routerLink]="['/content-info', '42346']">
-                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
-                            </a>
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-
-                            <a [routerLink]="['/content-info', '62346']">
-                                <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
-                            </a>    
-                            <img id='user' src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
-                            
-                            <div id="titles">
-                                <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
-                                <p style="width: 28%; margin-left: 5.5%;">Titulo longo</p>
-                                <p style="width: 28%; margin-left: 6.5%;">Titulo muito longo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div style="margin-bottom: 25%;"></div>
 
     <div id="footer">
         <a href="/news">

@@ -7,10 +7,16 @@
 </div>
 
 <div id="share-feat">
-    <div id="navbar">
-        <p>@wonder_woman</p>
+    <div id="link-copied" class="link-inactive">
+        <p>LINK COPIADO COM SUCESSO</p>
+    </div>
+
+    <div id="navbar" style="display: none;">
+        <p id="username"></p>
         <div id="profile-picture">
-            <img src="https://d.newsweek.com/en/full/1566603/wonder-woman-1984.jpg?w=1600&h=1600&q=88&f=f992f9debf800ee5eec2d796c0a64119">
+            <a href="/authentication">
+                <img id='user_picture'>
+            </a>
         </div>
     </div>
 
@@ -29,10 +35,12 @@
                 <p>https://globofeat.com/feat/<span id="feat-id-02">00000166</span></p>
             </div>
 
-            <div id="copy-feat-link">
-                <img src="../../../assets/copy.png">
-                <p>COPIAR LINK</p>
-            </div>
+            <a class="share">
+                <div id="copy-feat-link">
+                    <img src="../../../assets/copy.png">
+                    <p>COPIAR LINK</p>
+                </div>
+            </a>
         </div>
         
         <p id="copy-link-text">Copie o link e envie para amigos entrarem no feat com você!</p>
@@ -42,7 +50,7 @@
                 <a id="next-link">Iniciar transmissão</a>
             </div>
             <div id="back">
-                <a href="/choose-feat-type">Voltar</a>
+                <a href="/feat-home">Voltar</a>
             </div>
         </div>
     </div>

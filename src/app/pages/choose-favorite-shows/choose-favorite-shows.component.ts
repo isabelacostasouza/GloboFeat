@@ -20,6 +20,21 @@ export class ChooseFavoriteShowsComponent implements OnInit {
     let row_04 = document.getElementById('row-04');
     row_04.style.display = 'none';
 
+    var current_user = undefined;
+
+    var cookies = document.cookie.split(';');
+    cookies.forEach(element => {
+      if(element.split('=')[0] == 'username') {
+        current_user = element.split('=')[1];
+      }
+    });
+
+    if (current_user == undefined) {
+      window.location.pathname = '/news';
+    }
+
+    current_user = current_user.split('@')[0];
+
     $(".quiz-answer").click( function() {
       $(this).toggleClass( "active");
     });
@@ -34,16 +49,25 @@ export class ChooseFavoriteShowsComponent implements OnInit {
 
     $(".save").click( function() {
       let items = document.getElementsByClassName('item')  as HTMLCollectionOf<HTMLElement>;
-      let selected_contents = [];
+
+      var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&setHasAccessedBefore=true';
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", url, false );
+      xmlHttp.send( null );
 
       for (let i = 0; i < items.length; i++) {
         const item_class = $(items[i]).find('a')[0].className;
         if(item_class.includes('active')) {
-          selected_contents.push($(items[i]).attr("alt"));
+          var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&setShowCategory=' + $(items[i]).attr("alt");
+
+          var xmlHttp = new XMLHttpRequest();
+          xmlHttp.open( "GET", url, false );
+          xmlHttp.send( null );
         }
       }
 
-      console.log(selected_contents);
+      window.location.pathname = '/step-02';
+
     });
   }
 

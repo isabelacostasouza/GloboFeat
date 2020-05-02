@@ -48,17 +48,59 @@ export class NewsComponent implements OnInit {
 
         users_keys.forEach(element => {
 					if ((users_data[element].email) == current_user_email) {
-            if(users_data[element].hasAccessedBefore) {
-              //have accessed before
-              $('#username').text(element);
-              $("#user_picture").attr("src", ('../../../assets/users_data/user_pics/' + element + '.jpg'));
-            } else {
-              window.location.pathname = '/step-01';
-            }
+            var api_url = 'https://globo-feat.herokuapp.com/?get_json=true';
+
+            $.ajax({
+              type: 'GET',
+              crossDomain: true,
+              dataType: 'json',
+              url: api_url,
+              success: function(jsondata){
+
+                const news = jsondata.users[current_user_email.split('@')[0]].news;
+
+                let items = document.getElementsByClassName('chosenCategory')  as HTMLCollectionOf<HTMLElement>;
+    
+                for (let i = 0; i < items.length; i++) {
+                  const item_alt = $(items[i]).find('p').attr('alt');
+
+                  if (!(news.includes(item_alt))) {
+                    $(items[i]).css('display', 'none');
+                  } else {
+                    $(items[i]).css('display', 'block');
+                  }
+                }
+
+                if(jsondata.users[current_user_email.split('@')[0]].hasAccessedBefore) {
+                  //have accessed before
+                  $('#username').text(element);
+                  $("#user_picture").attr("src", ('../../../assets/users_data/user_pics/' + element + '.jpg'));
+                  $('#navbar').css('display', 'block');
+                } else {
+                  window.location.pathname = '/step-01';
+                }
+              }
+            });
+
 					}
 				});
       }
     }
+
+    function copyStringToClipboard(str) {
+      var el = document.createElement('textarea');
+      el.value = str;
+
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+
+      el.select();
+
+      document.execCommand('copy');
+      document.body.removeChild(el);
+   }
 
     function setLinkCopiedToInactive() {
       let notification = document.getElementById('link-copied');
@@ -79,7 +121,21 @@ export class NewsComponent implements OnInit {
       $(notification).removeClass("link-inactive");
       $(notification).toggleClass("link-active");
 
+      copyStringToClipboard($(this).attr('alt'));
       setTimeout(setLinkCopiedToInactive, 3000);
+    });
+
+    $('.selected-carousel-item').click( function() {
+      let items = document.getElementsByClassName('chosenCategory')  as HTMLCollectionOf<HTMLElement>;
+      
+      for (let i = 0; i < items.length; i++) {
+        const item_alt = $(items[i]).find('p').attr('alt');
+        if (!($(this).find('img').attr('alt') == item_alt)) {
+          $(items[i]).css('display', 'none');
+        } else {
+          $(items[i]).css('display', 'block');
+        }
+      }
     });
 
   }
