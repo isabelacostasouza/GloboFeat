@@ -23,6 +23,7 @@ import { FeatTypeComponent } from './pages/feat-type/feat-type.component';
 import { ChooseShowFeatContentComponent } from './pages/choose-show-feat-content/choose-show-feat-content.component';
 import { ChooseSportFeatContentComponent } from './pages/choose-sport-feat-content/choose-sport-feat-content.component';
 import { ShareFeatComponent } from './pages/share-feat/share-feat.component';
+import { WaitingRoomComponent } from './pages/waiting-room/waiting-room.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/news', pathMatch: 'full' },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'choose-show-feat-content', component: ChooseShowFeatContentComponent },
   { path: 'choose-sport-feat-content', component: ChooseSportFeatContentComponent },
   { path: 'share-feat/:id', component: ShareFeatComponent },
+  { path: 'waiting-room/:id', component: WaitingRoomComponent },
 
   //content
   { path: 'content-info/:id', component: ContentInfoComponent },
