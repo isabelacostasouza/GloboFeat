@@ -12,6 +12,79 @@ export class ShowsComponent implements OnInit {
 
   ngOnInit(): void {
 
+    let hasUser = false;
+    let json_final_data;
+    const items = $('#main-div').find('.carousel-item:visible');
+    
+    $('#search-input').keyup(() => {
+
+      let search_input = $('#search-input')[0].value;
+
+      if (search_input != '') {
+        for (let i = 0; i < items.length - 1; i++) {
+          let hasResult = false;
+          const items_title = $(items[i]).find('p');
+
+          let items_more = document.getElementsByClassName('more_content')  as HTMLCollectionOf<HTMLElement>;
+
+          for (let i = 0; i < items_more.length; i++) {
+            $(items_more[i]).css('display', 'none');
+          }
+
+          for (let j = 0; j < items_title.length; j++) {
+            if(((items_title[j].innerText).toLowerCase()).includes(search_input)) {
+              hasResult = true;
+            }
+          }
+
+          if (!hasResult) {
+            $(items[i]).parent().parent().parent().parent().removeClass("display");
+            $(items[i]).parent().parent().parent().parent().toggleClass("no-display");
+            $('.no-display').css('display', 'none');
+          } else {
+            $(items[i]).parent().parent().parent().parent().removeClass("no-display");
+            $(items[i]).parent().parent().parent().parent().toggleClass("display");
+            $('.display').css('display', 'block');
+          }
+        }
+      }
+
+      else {
+        if (hasUser) {
+          let items_more = document.getElementsByClassName('more_content')  as HTMLCollectionOf<HTMLElement>;
+
+          for (let i = 0; i < items_more.length; i++) {
+            $(items_more[i]).css('display', 'block');
+          }
+
+          for (let i = 0; i < items.length - 1; i++) {
+              $(items[i]).removeClass("display");
+              $(items[i]).parent().parent().parent().parent().removeClass("display");
+              $(items[i]).removeClass("no-display");
+              $(items[i]).parent().parent().parent().parent().removeClass("no-display");
+          }
+
+          let content_divs = document.getElementsByClassName('series-movies')  as HTMLCollectionOf<HTMLElement>;
+          let showCategories = json_final_data.users[current_user_email.split('@')[0]].showCategories;
+          for (let i = 0; i < content_divs.length; i++) {
+              if (!(showCategories.includes($(content_divs[i]).attr('class').split(' ')[1])) ) {
+                $(content_divs[i]).css('display', 'none');
+              }
+          }
+
+          let carousel_items = $('.more_content').find('.carousel-inner').find('.carousel-item')  as HTMLCollectionOf<HTMLElement>;
+          for (let i = 0; i < carousel_items.length; i++) {
+              if( showCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) ) {
+                $(carousel_items[i]).remove();
+              }
+          }
+
+
+        }
+      }
+    });
+
+    
     var api_url = 'https://globo-feat.herokuapp.com/?get_shows_json=true';
 
     $.ajax({
@@ -57,6 +130,7 @@ export class ShowsComponent implements OnInit {
     });
 
     if (current_user_email != undefined) {
+      hasUser = true;
       let navbar_without_login = document.getElementById('navbar-without-login');
       navbar_without_login.style.display = 'none';
 
@@ -94,9 +168,11 @@ export class ShowsComponent implements OnInit {
                   $("#user_picture").attr("src", ('../../../assets/users_data/user_pics/' + element + '.jpg'));
                   $('#navbar').css('display', 'block');
 
+                  console.log('oi');
                   let content_divs = document.getElementsByClassName('series-movies')  as HTMLCollectionOf<HTMLElement>;
                   let showCategories = jsondata.users[current_user_email.split('@')[0]].showCategories;
 
+                  json_final_data = jsondata;
                   for (let i = 0; i < content_divs.length; i++) {
                       if (!(showCategories.includes($(content_divs[i]).attr('class').split(' ')[1])) ) {
                         $(content_divs[i]).css('display', 'none');
