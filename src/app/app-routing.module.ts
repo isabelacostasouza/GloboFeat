@@ -17,6 +17,7 @@ import { SportsComponent } from '../app/pages/sports/sports.component';
 import { FeatHomeComponent } from '../app/pages/feat-home/feat-home.component';
 
 import { ContentInfoComponent } from '../app/pages/content-info/content-info.component';
+import { ContentInfoSportsComponent } from '../app/pages/content-info-sports/content-info-sports.component';
 import { EnterFeatComponent } from './pages/enter-feat/enter-feat.component';
 import { FeatTypeComponent } from './pages/feat-type/feat-type.component';
 import { ChooseShowFeatContentComponent } from './pages/choose-show-feat-content/choose-show-feat-content.component';
@@ -26,7 +27,7 @@ import { ShareFeatComponent } from './pages/share-feat/share-feat.component';
 const routes: Routes = [
   { path: '',   redirectTo: '/news', pathMatch: 'full' },
 
-  //main pages  
+  //main pages
   { path: 'news', component: NewsComponent },
   { path: 'shows', component: ShowsComponent },
   { path: 'sports', component: SportsComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
 
   //content
   { path: 'content-info/:id', component: ContentInfoComponent },
+  { path: 'content-info-sports/:id', component: ContentInfoSportsComponent },
 
   //initial steps
   { path: 'step-01', component: ChooseFavoriteShowsComponent },

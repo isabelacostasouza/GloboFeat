@@ -21,9 +21,9 @@ export class ShowsComponent implements OnInit {
       url: api_url,
       success: function(jsondata){
         let json_data = jsondata.users;
-        
+
         let items = document.getElementsByClassName('data_text')  as HTMLCollectionOf<HTMLElement>;
-    
+
         for (let i = 0; i < items.length; i++) {
           const div_content_alt = $(items[i]).attr('alt');
 
@@ -38,12 +38,12 @@ export class ShowsComponent implements OnInit {
               $(items[i]).find('div').find('img').attr('src', 'https://i.pinimg.com/474x/bd/1c/a5/bd1ca559f0b2238bd67f316eb8a907ff.jpg');
           }
         }
-        
+
       }
     });
 
     let elem = document.getElementById('circle');
-    
+
     elem.style.width = String(screen.width * 0.02) + 'px';
     elem.style.height = String(screen.width * 0.02) + 'px';
 

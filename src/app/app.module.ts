@@ -22,6 +22,7 @@ import { FeatTypeComponent } from './pages/feat-type/feat-type.component';
 import { ChooseShowFeatContentComponent } from './pages/choose-show-feat-content/choose-show-feat-content.component';
 import { ChooseSportFeatContentComponent } from './pages/choose-sport-feat-content/choose-sport-feat-content.component';
 import { ShareFeatComponent } from './pages/share-feat/share-feat.component';
+import { ContentInfoSportsComponent } from './pages/content-info-sports/content-info-sports.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ShareFeatComponent } from './pages/share-feat/share-feat.component';
     FeatTypeComponent,
     ChooseShowFeatContentComponent,
     ChooseSportFeatContentComponent,
-    ShareFeatComponent
+    ShareFeatComponent,
+    ContentInfoSportsComponent
   ],
   imports: [
     BrowserModule,

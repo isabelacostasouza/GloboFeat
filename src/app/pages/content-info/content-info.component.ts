@@ -22,7 +22,7 @@ export class ContentInfoComponent implements OnInit {
       success: function(jsondata){
         let json_data = jsondata.users;
         let content_data = json_data[$(location)[0].href.split('/')[$(location)[0].href.split('/').length - 1]];
-        
+
         $('#content_img').attr('src', content_data.img_link);
         $('#title').text(content_data.title.toUpperCase());
         $('#description').find('p').text(content_data.sinopse);

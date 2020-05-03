@@ -37,7 +37,7 @@ body {
         display: none;
         padding-right: 13%;
     }
-    
+
     .link-active {
         display: block;
     }
@@ -218,7 +218,7 @@ body {
             right: 10%;
         }
     }
-    
+
     #navbar-without-login {
         pointer-events: all;
         background-color: $background-color-dark;
@@ -227,7 +227,7 @@ body {
 
         height: 9%;
         width: 100%;
-        
+
         z-index: 2;
 
         a {
@@ -258,7 +258,7 @@ body {
         color: $white;
         font-family: 'Barlow';
         font-size: 150%;
-        
+
         #p1 {
             margin-top: 3%;
             font-size: 80%;
@@ -285,7 +285,7 @@ body {
 
         img {
             margin-bottom: 15%;
-        }   
+        }
 
         #login {
             margin: 0;
@@ -296,7 +296,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $green-light-shade,
                 $green-light-shade 5.5%,
                 $green-dark-shade 5.5%,
@@ -337,7 +337,7 @@ body {
             color: $white;
 
             width: 100%;
-            
+
             a {
                 text-decoration: none;
                 font-weight: 400;
@@ -388,7 +388,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $green-light-shade,
                 $green-light-shade 5.5%,
                 $green-dark-shade 5.5%,
@@ -421,7 +421,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $grey-light-shade,
                 $grey-light-shade 5.5%,
                 $grey-dark-shade 5.5%,
@@ -495,7 +495,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $blue-dark-shade,
                 $blue-dark-shade 5.5%,
                 $blue-light-shade 5.5%,
@@ -527,7 +527,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $grey-light-shade,
                 $grey-light-shade 5.5%,
                 $grey-dark-shade 5.5%,
@@ -561,7 +561,7 @@ body {
         margin-right: 5%;
         margin-top: 10%;
         margin-bottom: 10%;
-        
+
         font-family: 'Barlow';
         font-style: normal;
         font-weight: 100;
@@ -576,7 +576,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $yellow-dark-shade,
                 $yellow-dark-shade 5.5%,
                 $yellow-light-shade 5.5%,
@@ -611,7 +611,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $green-light-shade,
                 $green-light-shade 5.5%,
                 $green-dark-shade 5.5%,
@@ -671,7 +671,7 @@ body {
             background-size: cover;
             display: inline-block;
         }
-        
+
         .quizimgblock {
             text-align: center;
             margin-bottom: 2em;
@@ -814,7 +814,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $blue-dark-shade,
                 $blue-dark-shade 5.5%,
                 $blue-light-shade 5.5%,
@@ -847,7 +847,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $grey-light-shade,
                 $grey-light-shade 5.5%,
                 $grey-dark-shade 5.5%,
@@ -932,7 +932,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $red-dark-shade,
                 $red-dark-shade 5.5%,
                 $red-light-shade 5.5%,
@@ -964,7 +964,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $yellow-light-shade,
                 $yellow-light-shade 5.5%,
                 $yellow-dark-shade 5.5%,
@@ -976,7 +976,7 @@ body {
             line-height: 19px;
             letter-spacing: 0.01em;
             font-family: 'Barlow';
-            
+
             margin: 0;
             width: 100%;
             margin-top: -2%;
@@ -1004,7 +1004,7 @@ body {
 
             border:  none;
             outline: none;
-            
+
             background-size: 6%;
             background-image: url(https://img.icons8.com/ios/500/search--v1.png);
             background-repeat: no-repeat;
@@ -1060,64 +1060,6 @@ body {
 
                 #img {
                     width: 29%;
-                    display: inline-block;
-                }
-
-                img {
-                    display: inline-block;
-                    width: 100%;
-                }
-            }
-        }
-
-        #more {
-            text-align: left;
-            font-family: 'Barlow';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 130%;
-            line-height: 25px;
-            letter-spacing: 0.05em;
-
-            color: #F3992A;
-
-            padding-left: 3%;
-
-            margin-bottom: 20%;
-
-            p {
-                display: inline-block;
-                margin-left: 4%;
-                margin-bottom: 2.5%;
-            }
-
-            #user {
-                border-radius: 100%;
-                width: 10%;
-                margin-left: -8%;
-                margin-top: -5%;
-                border: 1px solid #000000;
-            }
-
-            .carousel-inner {
-                width: 100%;
-                display: inline-block;
-                padding-top: 1%;
-
-                #titles {
-                    text-align: left;
-                    color: $white;
-                    font-size: 65%;
-
-                    p {
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                    }
-                }
-
-                #img {
-                    width: 28%;
                     display: inline-block;
                 }
 
@@ -1202,15 +1144,15 @@ body {
 
                 margin-top: 3%;
                 margin-bottom: 30%;
-    
+
                 background-image: linear-gradient(
-                    to right, 
+                    to right,
                     $yellow-dark-shade,
                     $yellow-dark-shade 5.5%,
                     $yellow-light-shade 5.5%,
                     $yellow-light-shade 85%,
                 );
-    
+
                 text-align: left;
                 font-style: normal;
                 font-weight: 600;
@@ -1218,9 +1160,9 @@ body {
                 line-height: 19px;
                 letter-spacing: 0.05em;
                 font-family: 'Barlow';
-    
+
                 color: #000000;
-    
+
                 width: 90%;
                 margin-left: 2.4%;
 
@@ -1266,7 +1208,7 @@ body {
 
                         width: 20%;
                         padding-left: 2.5%;
-                        
+
 
                         img {
                             width: 30%;
@@ -1317,7 +1259,7 @@ body {
     }
 
     #sports-home {
-        #soccer {
+        #sports-section {
             text-align: left;
             font-family: 'Barlow';
             font-style: normal;
@@ -1448,7 +1390,7 @@ body {
                 margin-top: -19.5%;
                 display: inline-block;
             }
-    
+
             #info {
                 padding-top: 28%;
                 width: 68%;
@@ -1573,15 +1515,15 @@ body {
             #create-feat, #back {
                 outline: none;
                 border: none;
-    
+
                 background-image: linear-gradient(
-                    to right, 
+                    to right,
                     $yellow-dark-shade,
                     $yellow-dark-shade 5.5%,
                     $yellow-light-shade 5.5%,
                     $yellow-light-shade 85%,
                 );
-    
+
                 text-align: left;
                 font-style: normal;
                 font-weight: 600;
@@ -1589,9 +1531,9 @@ body {
                 line-height: 19px;
                 letter-spacing: 0.05em;
                 font-family: 'Barlow';
-    
+
                 color: #000000;
-    
+
                 margin: 0;
                 width: 82%;
                 margin-left: auto;
@@ -1599,7 +1541,7 @@ body {
                 margin-top: 2%;
                 padding-top: 3%;
                 padding-bottom: 3.5%;
-    
+
                 a {
                     text-decoration: none;
                     color: #000000;
@@ -1624,7 +1566,7 @@ body {
                 border: none;
 
                 background-image: linear-gradient(
-                    to right, 
+                    to right,
                     $yellow-dark-shade,
                     $yellow-dark-shade 5.5%,
                     $yellow-light-shade 5.5%,
@@ -1688,7 +1630,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $yellow-dark-shade,
                 $yellow-dark-shade 5.5%,
                 $yellow-light-shade 5.5%,
@@ -1777,7 +1719,7 @@ body {
                 font-weight: 600;
                 padding-top: 5%;
                 background-image: linear-gradient(
-                    to right, 
+                    to right,
                     $yellow-dark-shade,
                     $yellow-dark-shade 5.5%,
                     $yellow-light-shade 5.5%,
@@ -1870,7 +1812,7 @@ body {
             border: none;
 
             background-image: linear-gradient(
-                to right, 
+                to right,
                 $yellow-dark-shade,
                 $yellow-dark-shade 5.5%,
                 $yellow-light-shade 5.5%,
