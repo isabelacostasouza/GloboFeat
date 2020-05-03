@@ -168,13 +168,12 @@ export class ShowsComponent implements OnInit {
                   $("#user_picture").attr("src", ('../../../assets/users_data/user_pics/' + element + '.jpg'));
                   $('#navbar').css('display', 'block');
 
-                  console.log('oi');
                   let content_divs = document.getElementsByClassName('series-movies')  as HTMLCollectionOf<HTMLElement>;
                   let showCategories = jsondata.users[current_user_email.split('@')[0]].showCategories;
 
                   json_final_data = jsondata;
                   for (let i = 0; i < content_divs.length; i++) {
-                      if (!(showCategories.includes($(content_divs[i]).attr('class').split(' ')[1])) ) {
+                      if (!(showCategories.includes($(content_divs[i]).attr('class').split(' ')[2])) ) {
                         $(content_divs[i]).css('display', 'none');
                       }
                   }
