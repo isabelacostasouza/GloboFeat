@@ -18,7 +18,7 @@
     
     <img id='logo-img' src="../../../assets/logo.png">
 
-    <input style='font-size: 100%; padding-top: 1.5%; padding-bottom: 1%;' type="text" placeholder="Pesquisar conteúdo">
+    <input style='font-size: 100%; padding-top: 1.5%; padding-bottom: 1%;' id='search-input' type="text" placeholder="Pesquisar conteúdo">
 
     <div id="chosen-content" class="chosen-content" style="background-color: rgb(42, 43, 43);">
         <p id="close">x</p>
@@ -31,79 +31,470 @@
         </a>
     </div>
     
-    <div id="series-movies">
-        <p style="margin-top: 2%;">ENTRETENIMENTO</p>
+    <div id="main-div">
+        <div id="series-movies" class="series-movies display reality-show">
+            <p>REALITY SHOWS</p>
 
-        <div class="container" style="margin-top: 2%;">
-            <div class="carousel-inner">
-                <a class="choose-title">
-                    <span style="display:'none'">000010</span>
-                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="Titulo 1" /></div>
-                </a>
-                <a class="choose-title">
-                    <span style="display:'none'">000011</span>
-                    <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="Titulo 1" /></div>
-                </a>
-                <a class="choose-title">
-                    <span style="display:'none'">000012</span>
-                    <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="Titulo 1" /></div>
-                </a>
-                
-                <div id="titles">
-                    <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
-                    <p style="width: 28%; margin-left: 3.5%;">Titulo longo</p>
-                    <p style="width: 28%; margin-left: 5%;">Titulo muito longo</p>
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100000'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100001'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100002'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100000'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100001'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100002'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
                 </div>
             </div>
         </div>
 
-        <div class="container" style="margin-top: -3%;">
-            <div class="carousel-inner">
-                <a class="choose-title">
-                    <span style="display:'none'">000013</span>
-                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="Titulo 1" /></div>
-                </a>
-                <a class="choose-title">
-                    <span style="display:'none'">000014</span>
-                    <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="Titulo longo" /></div>
-                </a>
-                <a class="choose-title">
-                    <span style="display:'none'">000015</span>
-                    <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="Titulo muito longo" /></div>
-                </a>
-                
-                <div id="titles">
-                    <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
-                    <p style="width: 28%; margin-left: 3.5%;">Titulo longo</p>
-                    <p style="width: 28%; margin-left: 5%;">Titulo muito longo</p>
+        <div id="series-movies" class="series-movies display romance">
+            <p>ROMANCE</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100003'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100004'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100005'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100003'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100004'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100005'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
                 </div>
             </div>
         </div>
 
-        <div class="container" style="margin-top: -3%; margin-bottom: 25%;">
-            <div class="carousel-inner">
-                <a class="choose-title">
-                    <span style="display:'none'">000016</span>
-                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="Titulo 1" /></div>
-                </a>
-                <a class="choose-title">
-                    <span style="display:'none'">000017</span>
-                    <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="Titulo longo" /></div>
-                </a>
-                <a class="choose-title">
-                    <span style="display:'none'">000018</span>
-                    <div id="img" style="margin-left: 4%;"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="Titulo muito longo" /></div>
-                </a>
-                
-                <div id="titles">
-                    <p style="width: 28%; margin-left: 0.75%;">Titulo 1</p>
-                    <p style="width: 28%; margin-left: 3.5%;">Titulo longo</p>
-                    <p style="width: 28%; margin-left: 5%;">Titulo muito longo</p>
+        <div id="series-movies" class="series-movies display action">
+            <p>AÇÃO</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100006'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100007'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100008'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100006'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100007'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100008'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
                 </div>
             </div>
         </div>
 
+        <div id="series-movies" class="series-movies display novel">
+            <p>NOVELAS</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100009'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100010'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100011'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100009'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100010'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100011'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display drama">
+            <p>DRAMA</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100012'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100013'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100014'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100012'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100013'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100014'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display comedy">
+            <p>COMÉDIA</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100015'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100016'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100017'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100015'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100016'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100017'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display war">
+            <p>GUERRA</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100018'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100019'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100020'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100018'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='1000119'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100020'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display horror">
+            <p>TERROR</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100021'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100022'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100023'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100021'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100022'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100023'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display sci-fi">
+            <p>SCI-FI</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100024'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100025'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100026'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100024'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100025'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100026'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display musical">
+            <p>MUSICAL</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100027'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100028'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100029'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100027'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100028'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100029'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display historical">
+            <p>HISTÓRICOS</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100030'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100031'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100032'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100030'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100031'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100032'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width: 97%;
+                    height: 3px;
+                    margin-bottom: 6%;
+                    margin-top: 1%;
+                    background: #2e2e2e;">
+                </div>
+            </div>
+        </div>
+
+        <div id="series-movies" class="series-movies display kids">
+            <p>CRIANÇAS</p>
+
+            <div class="container">
+                <div id='carouselContainer' class="carousel slide" data-ride="carousel" data-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item display active">
+                            <div class="">
+                                <a class="data_text choose-title" alt='100033'>
+                                    <div id="img"><img src="https://i.imgur.com/3aIutJi.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100034'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/8946bSF.png" class="d-block" alt="js" /></div>
+                                </a>
+
+                                <a class="data_text choose-title" alt='100035'>
+                                    <div id="img" style="margin-left: 5%"><img src="https://i.imgur.com/eQoyQjy.png" class="d-block" alt="js" /></div>
+                                </a>
+                                
+                                <div id="titles">
+                                    <p style="width: 28%; margin-left: 0.75%;" class='100033'>Titulo 1</p>
+                                    <p style="width: 28%; margin-left: 5.5%;" class='100034'>Titulo longo</p>
+                                    <p style="width: 28%; margin-left: 6.5%;" class='100035'>Titulo muito longo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div style="margin-bottom: 25%;"></div>
 
     <div id="footer">
         <a href="/news">
