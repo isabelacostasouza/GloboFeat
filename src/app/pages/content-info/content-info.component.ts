@@ -58,7 +58,7 @@ export class ContentInfoComponent implements OnInit {
     });
 
     var feat_id = $(location)[0].href.split('/')[$(location)[0].href.split('/').length - 1];
-    $('#create-feat-link').attr('href', ('/share-feat/' + feat_id));
+    $('#create-feat-link').attr('href', ('/share-feat/' + feat_id + '#01'));
   }
 
 }
