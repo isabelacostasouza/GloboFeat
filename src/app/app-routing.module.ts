@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -23,9 +24,12 @@ import { FeatTypeComponent } from './pages/feat-type/feat-type.component';
 import { ChooseShowFeatContentComponent } from './pages/choose-show-feat-content/choose-show-feat-content.component';
 import { ChooseSportFeatContentComponent } from './pages/choose-sport-feat-content/choose-sport-feat-content.component';
 import { ShareFeatComponent } from './pages/share-feat/share-feat.component';
+import { InitialPageComponent } from './pages/initial-page/initial-page.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: '/news', pathMatch: 'full' },
+
+  { path: 'welcome', component: InitialPageComponent },
 
   //main pages
   { path: 'news', component: NewsComponent },
@@ -56,6 +60,7 @@ const routes: Routes = [
 
   //premium services
   { path: 'association', component: AssociationComponent },
+  { path: '**', component: NewsComponent },  // Wildcard route for a 404 page
 ];
 
 @NgModule({
