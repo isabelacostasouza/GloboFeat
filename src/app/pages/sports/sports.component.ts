@@ -120,6 +120,12 @@ export class SportsComponent implements OnInit {
 					}
 				});
       }
+    }  else {
+      let items = document.getElementsByClassName('more_content')  as HTMLCollectionOf<HTMLElement>;
+
+      for (let i = 0; i < items.length; i++) {
+        $(items[i]).css('display', 'none');
+      }
     }
   }
 
