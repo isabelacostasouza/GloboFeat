@@ -33,6 +33,12 @@ body {
     background: $background-color;
     font-family: 'Cabin';
 
+    #waiting-room {
+        font-family: 'Barlow';
+        font-weight: 100;
+        color: white;
+    }
+
     #navbar {
         display: none;
         padding-right: 13%;

@@ -24,6 +24,7 @@ import { ChooseSportFeatContentComponent } from './pages/choose-sport-feat-conte
 import { ShareFeatComponent } from './pages/share-feat/share-feat.component';
 import { ContentInfoSportsComponent } from './pages/content-info-sports/content-info-sports.component';
 import { InitialPageComponent } from './pages/initial-page/initial-page.component';
+import { WaitingRoomComponent } from './pages/waiting-room/waiting-room.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { InitialPageComponent } from './pages/initial-page/initial-page.componen
     ChooseSportFeatContentComponent,
     ShareFeatComponent,
     ContentInfoSportsComponent,
-    InitialPageComponent
+    InitialPageComponent,
+    WaitingRoomComponent
   ],
   imports: [
     BrowserModule,
