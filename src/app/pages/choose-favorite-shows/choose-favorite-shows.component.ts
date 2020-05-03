@@ -49,6 +49,7 @@ export class ChooseFavoriteShowsComponent implements OnInit {
 
     $(".save").click( function() {
       let items = document.getElementsByClassName('item')  as HTMLCollectionOf<HTMLElement>;
+      let array_is_empty = true;
 
       var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&setHasAccessedBefore=true';
       var xmlHttp = new XMLHttpRequest();
@@ -58,6 +59,7 @@ export class ChooseFavoriteShowsComponent implements OnInit {
       for (let i = 0; i < items.length; i++) {
         const item_class = $(items[i]).find('a')[0].className;
         if(item_class.includes('active')) {
+          array_is_empty = false
           var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&setShowCategory=' + $(items[i]).attr("alt");
 
           var xmlHttp = new XMLHttpRequest();
@@ -66,7 +68,8 @@ export class ChooseFavoriteShowsComponent implements OnInit {
         }
       }
 
-      window.location.pathname = '/step-02';
+      if(!array_is_empty)
+        window.location.pathname = '/step-02';
 
     });
   }

@@ -67,6 +67,30 @@ export class FeatHomeComponent implements OnInit {
 				});
       }
     }
+
+    $('.add_friends').click( function() {
+      let current_user = current_user_email.split('@')[0];
+
+      var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&restore_friends=true';
+
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", url, false );
+      xmlHttp.send( null );
+
+      window.location.pathname = '/find-friends';
+    });
+
+    $('.personalize_profile').click( function() {
+      let current_user = current_user_email.split('@')[0];
+
+      var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&restore_personalization=true';
+
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", url, false );
+      xmlHttp.send( null );
+
+      window.location.pathname = '/step-01';
+    });
   }
 
 }

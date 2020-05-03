@@ -45,10 +45,12 @@ export class ChooseFavoriteSportShowsComponent implements OnInit {
 
     $(".save").click( function() {
       let items = document.getElementsByClassName('item')  as HTMLCollectionOf<HTMLElement>;
+      let array_is_empty = true;
 
       for (let i = 0; i < items.length; i++) {
         const item_class = $(items[i]).find('a')[0].className;
         if(item_class.includes('active')) {
+          array_is_empty = false;
           var url = 'https://globo-feat.herokuapp.com/?user=' + current_user + '&setSportCategory=' + $(items[i]).attr("alt");
 
           var xmlHttp = new XMLHttpRequest();
@@ -57,7 +59,8 @@ export class ChooseFavoriteSportShowsComponent implements OnInit {
         }
       }
 
-      window.location.pathname = '/step-03';
+      if(!array_is_empty)
+        window.location.pathname = '/step-03';
 
     });
 
