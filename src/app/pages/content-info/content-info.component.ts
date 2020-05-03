@@ -11,6 +11,26 @@ export class ContentInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    var api_url = 'https://globo-feat.herokuapp.com/?get_shows_json=true';
+
+    $.ajax({
+      type: 'GET',
+      crossDomain: true,
+      dataType: 'json',
+      url: api_url,
+      success: function(jsondata){
+        let json_data = jsondata.users;
+        let content_data = json_data[$(location)[0].href.split('/')[$(location)[0].href.split('/').length - 1]];
+        
+        $('#content_img').attr('src', content_data.img_link);
+        $('#title').text(content_data.title.toUpperCase());
+        $('#description').find('p').text(content_data.sinopse);
+      }
+    });
+
+
+
     function setLikeToInactive() {
       let notification = document.getElementById('like');
       $(notification).removeClass("like-active");
