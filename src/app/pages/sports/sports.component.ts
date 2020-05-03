@@ -92,6 +92,25 @@ export class SportsComponent implements OnInit {
                   $('#username').text(element);
                   $("#user_picture").attr("src", ('../../../assets/users_data/user_pics/' + element + '.jpg'));
                   $('#navbar').css('display', 'block');
+
+                  let content_divs = document.getElementsByClassName('sports-section')  as HTMLCollectionOf<HTMLElement>;
+                  let sportCategories = jsondata.users[current_user_email.split('@')[0]].sportCategories;
+
+                  for (let i = 0; i < content_divs.length; i++) {
+                      if (!(sportCategories.includes($(content_divs[i]).attr('class').split(' ')[1])) ) {
+                        $(content_divs[i]).css('display', 'none');
+                      }
+                  }
+
+
+                  let carousel_items = $('.more_content').find('.carousel-inner').find('.carousel-item')  as HTMLCollectionOf<HTMLElement>;
+
+                  for (let i = 0; i < carousel_items.length; i++) {
+                      if( sportCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) ) {
+                        $(carousel_items[i]).remove();
+                      }
+                  }
+
                 } else {
                   window.location.pathname = '/step-01';
                 }
@@ -100,6 +119,12 @@ export class SportsComponent implements OnInit {
 
 					}
 				});
+      }
+    }  else {
+      let items = document.getElementsByClassName('more_content')  as HTMLCollectionOf<HTMLElement>;
+
+      for (let i = 0; i < items.length; i++) {
+        $(items[i]).css('display', 'none');
       }
     }
   }

@@ -99,7 +99,6 @@ export class ChooseShowFeatContentComponent implements OnInit {
 				});
       }
     }
-
     let elem = document.getElementsByClassName('chosen-content')  as HTMLCollectionOf<HTMLElement>;
     elem[0].style.display = 'none';
 

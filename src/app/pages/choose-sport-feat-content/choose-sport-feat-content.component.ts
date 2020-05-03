@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChooseSportFeatContentComponent implements OnInit {
 
+<<<<<<< HEAD
 
   constructor() { }
 
@@ -44,6 +45,11 @@ export class ChooseSportFeatContentComponent implements OnInit {
       }
     });
 
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+>>>>>>> 3a2bb42d42d9e30ca081f083238d22f51990b4d6
     var current_user_email = undefined;
 
     var cookies = document.cookie.split(';');
@@ -100,7 +106,11 @@ export class ChooseSportFeatContentComponent implements OnInit {
 				});
       }
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 3a2bb42d42d9e30ca081f083238d22f51990b4d6
     let elem = document.getElementsByClassName('chosen-content')  as HTMLCollectionOf<HTMLElement>;
     elem[0].style.display = 'none';
 
