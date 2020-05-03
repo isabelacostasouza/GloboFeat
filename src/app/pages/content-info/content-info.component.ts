@@ -105,6 +105,11 @@ export class ContentInfoComponent implements OnInit {
 					}
 				});
       }
+    } else {
+      //user is not logged in
+      $('.create-feat').css('display', 'none');
+      $('.recomended-by').css('display', 'none');
+      $('.recomend-feat').css('display', 'none');
     }
 
     var api_url = 'https://globo-feat.herokuapp.com/?get_shows_json=true';
