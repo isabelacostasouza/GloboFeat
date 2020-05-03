@@ -25,9 +25,6 @@ let NewsComponent = class NewsComponent {
             $(notification).toggleClass("link-active");
             setTimeout(setLinkCopiedToInactive, 3000);
         });
-        function test() {
-            console.log('oi');
-        }
     }
 };
 NewsComponent = __decorate([

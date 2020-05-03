@@ -81,18 +81,6 @@ export class FindFriendsComponent implements OnInit {
         xmlHttp.send( null );
       }
 
-      var api_url = 'https://globo-feat.herokuapp.com/?get_json=true';
-
-      $.ajax({
-        type: 'GET',
-        crossDomain: true,
-        dataType: 'json',
-        url: api_url,
-        success: function(jsondata){
-          console.log(jsondata.users[current_user]);
-        }
-      });
-
       window.location.pathname = '/news';
     });
   }
