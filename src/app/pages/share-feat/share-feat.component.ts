@@ -128,6 +128,25 @@ export class ShareFeatComponent implements OnInit {
         dataType: 'json',
         url: api_url,
         success: function(jsondata){
+          $.ajax({
+            type: 'GET',
+            crossDomain: true,
+            dataType: 'json',
+            url: api_url,
+            success: function(jsondata){
+              var feat_id = $(location)[0].href.split('/')[$(location)[0].href.split('/').length - 1].replace('#', '');
+              var api_url = 'https://globo-feat.herokuapp.com/?startFeat=' + feat_id;
+              
+              $.ajax({
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'json',
+                url: api_url,
+                success: function(jsondata){}
+              });
+            }
+          });
+
           let feat_url = 'https://globofeat-api.herokuapp.com/r/' + feat_id + '/' + user_name + '/' + jsondata.feats[content_id].youtube_link;
           window.location.replace(feat_url);
         }

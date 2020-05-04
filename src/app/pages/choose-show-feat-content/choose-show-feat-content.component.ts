@@ -12,6 +12,12 @@ export class ChooseShowFeatContentComponent implements OnInit {
 
   ngOnInit(): void {
 
+    function pad(n, width) {
+      let z = '0';
+      n = n + '';
+      return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+    }
+
     let json_final_data;
     const items = $('#main-div').find('.carousel-item:visible');
     
@@ -157,10 +163,49 @@ export class ChooseShowFeatContentComponent implements OnInit {
       $('#chosen-content-img').attr('src', content_img);
       $('#chosen-content-title').text(content_title);
 
-      $('#choose-content-link').attr('href', ('/share-feat/') + content_id + '#01');
-
       let elem = document.getElementsByClassName('chosen-content')  as HTMLCollectionOf<HTMLElement>;
       elem[0].style.display = 'block';
+
+      var api_url = 'https://globo-feat.herokuapp.com/?get_feat_json=true';
+
+      $.ajax({
+        type: 'GET',
+        crossDomain: true,
+        dataType: 'json',
+        url: api_url,
+        success: function(jsondata){
+          let content_data = jsondata.feats[content_id];
+
+          if (content_data.owner.length == 0) {
+            var api_url = 'https://globo-feat.herokuapp.com/?setNewFeat=' + content_id + '00';
+
+            $.ajax({
+              type: 'GET',
+              crossDomain: true,
+              dataType: 'json',
+              url: api_url,
+              success: function(jsondata){}
+            });
+
+            $('#choose-content-link').attr('href', ('/share-feat/' + content_id + '#00'));
+          } else {
+            var new_feat_id = pad((content_data.hasStarted.length), 2).toString();
+
+            var api_url = 'https://globo-feat.herokuapp.com/?setNewFeat=' + content_id + new_feat_id;
+
+            $.ajax({
+              type: 'GET',
+              crossDomain: true,
+              dataType: 'json',
+              url: api_url,
+              success: function(jsondata){}
+            });
+
+            $('#choose-content-link').attr('href', ('/share-feat/' + content_id + '#' + new_feat_id));
+          }
+        }
+      });
+
     });
   }
 
