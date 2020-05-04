@@ -11,6 +11,9 @@ export class ShareFeatComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    var feat_id = $(location)[0].href.split('/')[$(location)[0].href.split('/').length - 1].replace('#', '');
+    $(".feat_id").text(feat_id);
+
     var current_user_email = undefined;
 
     var cookies = document.cookie.split(';');
@@ -86,12 +89,49 @@ export class ShareFeatComponent implements OnInit {
       $(this).toggleClass("active");
     });
 
+    function copyStringToClipboard(str) {
+      var el = document.createElement('textarea');
+      el.value = str;
+
+      el.setAttribute('readonly', '');
+      el.style.position = 'absolute';
+      el.style.left = '-9999px';
+      document.body.appendChild(el);
+
+      el.select();
+
+      document.execCommand('copy');
+      document.body.removeChild(el);
+   }
+
     $(".share").click( function() {
       let notification = document.getElementById('link-copied');
       $(notification).removeClass("link-inactive");
       $(notification).toggleClass("link-active");
 
+      copyStringToClipboard(('http://globofeat.online/waiting-room/' + feat_id));
+
       setTimeout(setLinkCopiedToInactive, 3000);
+    });
+
+    $('.start').click( function() {
+      let user_name = current_user_email.split('@')[0].split('_')[0];
+
+      let content_id = feat_id.substring(0, feat_id.length - 1);
+      content_id = content_id.substring(0, content_id.length - 1);
+
+      var api_url = 'https://globo-feat.herokuapp.com/?get_feat_json=true';
+
+      $.ajax({
+        type: 'GET',
+        crossDomain: true,
+        dataType: 'json',
+        url: api_url,
+        success: function(jsondata){
+          let feat_url = 'https://globofeat-api.herokuapp.com/r/' + feat_id + '/' + user_name + '/' + jsondata.feats[content_id].youtube_link;
+          window.location.replace(feat_url);
+        }
+      });
     });
   }
 
