@@ -138,6 +138,28 @@ export class NewsComponent implements OnInit {
       }
     });
 
+    $('.like-div').click( function() {
+      let original_html = $(this)[0].innerHTML;
+
+      console.log(original_html);
+
+      if(original_html.includes('080')) {
+        $(this)[0].innerHTML = original_html.replace('080', '081');
+      } else if (original_html.includes('081')) {
+        $(this)[0].innerHTML = original_html.replace('081', '080');
+      } else if (original_html.includes('100')) {
+        $(this)[0].innerHTML = original_html.replace('100', '101');
+      } else if (original_html.includes('101')) {
+        $(this)[0].innerHTML = original_html.replace('101', '100');
+      }
+
+      if ($(this).find('img').attr('src').includes('star-white')) {
+        $(this).find('img').attr('src', '../../../assets/star.png');
+      } else {
+        $(this).find('img').attr('src', '../../../assets/star-white.png');
+      }
+    });
+
   }
 
 }
