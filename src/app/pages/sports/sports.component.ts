@@ -78,8 +78,6 @@ export class SportsComponent implements OnInit {
                 $(carousel_items[i]).remove();
               }
           }
-
-
         }
       }
     });
@@ -174,7 +172,7 @@ export class SportsComponent implements OnInit {
                   json_final_data = jsondata;
 
                   for (let i = 0; i < content_divs.length; i++) {
-                      if (!(sportCategories.includes($(content_divs[i]).attr('class').split(' ')[2])) ) {
+                      if (!(sportCategories.includes($(content_divs[i]).attr('class').split(' ')[2])) && $(content_divs[i]).attr('class').split(' ')[2] != 'soccer') {
                         $(content_divs[i]).css('display', 'none');
                       }
                   }
@@ -182,7 +180,8 @@ export class SportsComponent implements OnInit {
                   let carousel_items = $('.more_content').find('.carousel-inner').find('.carousel-item')  as HTMLCollectionOf<HTMLElement>;
 
                   for (let i = 0; i < carousel_items.length; i++) {
-                      if( sportCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) ) {
+                      
+                      if(sportCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) && $(carousel_items[i]).attr('class').split('item-')[1] !='soccer') {
                         $(carousel_items[i]).remove();
                       }
                   }

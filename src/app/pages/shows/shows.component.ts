@@ -48,7 +48,6 @@ export class ShowsComponent implements OnInit {
           }
         }
       }
-
       else {
         if (hasUser) {
           let items_more = document.getElementsByClassName('more_content')  as HTMLCollectionOf<HTMLElement>;
@@ -78,10 +77,37 @@ export class ShowsComponent implements OnInit {
                 $(carousel_items[i]).remove();
               }
           }
-
-
         }
       }
+
+      let items_more = document.getElementsByClassName('more_content')  as HTMLCollectionOf<HTMLElement>;
+
+      for (let i = 0; i < items_more.length; i++) {
+        $(items_more[i]).css('display', 'block');
+      }
+
+      for (let i = 0; i < items.length - 1; i++) {
+          $(items[i]).removeClass("display");
+          $(items[i]).parent().parent().parent().parent().removeClass("display");
+          $(items[i]).removeClass("no-display");
+          $(items[i]).parent().parent().parent().parent().removeClass("no-display");
+      }
+
+      let content_divs = document.getElementsByClassName('series-movies')  as HTMLCollectionOf<HTMLElement>;
+      let showCategories = json_final_data.users[current_user_email.split('@')[0]].showCategories;
+      for (let i = 0; i < content_divs.length; i++) {
+          if (!(showCategories.includes($(content_divs[i]).attr('class').split(' ')[1])) ) {
+            $(content_divs[i]).css('display', 'none');
+          }
+      }
+
+      let carousel_items = $('.more_content').find('.carousel-inner').find('.carousel-item')  as HTMLCollectionOf<HTMLElement>;
+      for (let i = 0; i < carousel_items.length; i++) {
+          if( showCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) && $(carousel_items[i]).attr('class').split('item-')[1] != 'reality-show' ) {
+            $(carousel_items[i]).remove();
+          }
+      }
+
     });
 
     
@@ -178,11 +204,10 @@ export class ShowsComponent implements OnInit {
                       }
                   }
 
-
                   let carousel_items = $('.more_content').find('.carousel-inner').find('.carousel-item')  as HTMLCollectionOf<HTMLElement>;
 
                   for (let i = 0; i < carousel_items.length; i++) {
-                      if( showCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) ) {
+                      if( showCategories.includes($(carousel_items[i]).attr('class').split('item-')[1]) && $(carousel_items[i]).attr('class').split('item-')[1] != 'reality-show') {
                         $(carousel_items[i]).remove();
                       }
                   }
