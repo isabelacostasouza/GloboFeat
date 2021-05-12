@@ -31,7 +31,7 @@
     "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "save": "^2.4.0",
-    "swiper": "^5.3.8",
+    "swiper": "^6.5.1",
     "tslib": "^1.10.0",
     "typescript": "~3.8.3",
     "@angular-devkit/build-angular": "~0.901.3",
